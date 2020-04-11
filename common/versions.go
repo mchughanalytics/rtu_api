@@ -18,7 +18,7 @@ type Version struct {
 func GetAllVersions() (*VersionList, error) {
 	vl := &VersionList{}
 
-	versionsPath, _ := filepath.Abs("./versions.json")
+	versionsPath, _ := filepath.Abs("./common/versions.json")
 	content, err := ioutil.ReadFile(versionsPath)
 	if err != nil {
 		return vl, fmt.Errorf("ERROR: unable to read version.json: %s", err)
