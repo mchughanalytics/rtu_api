@@ -2,7 +2,6 @@ package api
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/mchughanalytics/rtu_api/common"
@@ -21,16 +20,15 @@ func Versions(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
 
 	v, err := common.GetAllVersions()
-
-	fmt.Printf("\n\nv: %s\nerr: %s", v, err)
-
-	vbytes, err := json.MarshalIndent(v, "", "  ")
-
-	fmt.Printf("\n\nvbytes: %s", vbytes)
-
 	if err != nil {
 		w.Write([]byte(`{"message": "an error occured."}`))
 	} else {
-		w.Write(vbytes)
+
+		vbytes, err := json.MarshalIndent(v, "", "  ")
+		if err != nil {
+			w.Write([]byte(`{"message": "an error occured."}`))
+		} else {
+			w.Write(vbytes)
+		}
 	}
 }
