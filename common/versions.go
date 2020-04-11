@@ -1,9 +1,10 @@
 package common
 
-import {
+import (
 	"encoding/json"
 	"fmt"
-}
+	"io/ioutil"
+)
 
 type VersionList struct {
 	Versions []Version `json:"versions"`
