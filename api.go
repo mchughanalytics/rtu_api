@@ -2,7 +2,8 @@ package rtu_api
 
 import (
 	"fmt"
-	"E:/Source/RTU_API/src/common"
+
+	"github.com/mchughanalytics/rtu_api/common"
 )
 
 func main() {
