@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"path/filepath"
 )
 
 type VersionList struct {
@@ -17,7 +18,8 @@ type Version struct {
 func GetAllVersions() (*VersionList, error) {
 	vl := &VersionList{}
 
-	content, err := ioutil.ReadFile("./versions.json")
+	versionsPath, _ := filepath.Abs("./versions.json")
+	content, err := ioutil.ReadFile(versionsPath)
 	if err != nil {
 		return vl, fmt.Errorf("ERROR: unable to read version.json: %s", err)
 	}
