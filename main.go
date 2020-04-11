@@ -14,7 +14,7 @@ func main() {
 
 	// mapping endpoints/functions
 	r.HandleFunc("/", myapi.DefaultEndpoint).Methods(http.MethodGet)
-	r.HandleFunc("/", myapi.Versions).Methods(http.MethodGet)
+	r.HandleFunc("/versions/", myapi.Versions).Methods(http.MethodGet)
 
 	// start server
 	log.Fatal(http.ListenAndServe(":8080", r))
