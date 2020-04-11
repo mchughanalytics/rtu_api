@@ -14,8 +14,11 @@ type VersionList struct {
 }
 
 type Version struct {
-	RTUVersion  string `json:"rtuVersion"`
-	ReleaseDate string `json:"releaseDate"`
+	RTUVersion           string   `json:"rtuVersion"`
+	ReleaseDate          string   `json:"releaseDate"`
+	DownloadLink         string   `json:"downloadLink"`
+	Platform             string   `json:"platform"`
+	CompatibleRMVersions []string `json:"compatibleRMVersions"`
 }
 
 func (v *Version) GetMajor() int {

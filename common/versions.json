@@ -2,11 +2,17 @@
     "versions": [
         {
             "rtuVersion": "1.0.0",
-            "releaseDate": "20200501"
+            "releaseDate": "20200501",
+            "downloadLink": "",
+            "platform": "Windows",
+            "compatibleRMVersions": []
         },
         {
             "rtuVersion": "1.0.1",
-            "releaseDate": "20200501"
+            "releaseDate": "20200501",
+            "downloadLink": "",
+            "platform": "Windows",
+            "compatibleRMVersions": []
         }
     ]
 }
