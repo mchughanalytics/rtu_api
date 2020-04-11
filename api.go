@@ -1,4 +1,4 @@
-package rtuapi
+package rtu_api
 
 import (
 	"net/http"
