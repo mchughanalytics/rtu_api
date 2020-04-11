@@ -14,7 +14,7 @@ type Version struct {
 	RTUVersion string `json:"rtuVersion"`
 }
 
-func GetAllVersions() (VersionList, error) {
+func GetAllVersions() (*VersionList, error) {
 	vl := &VersionList{}
 
 	content, err := ioutil.ReadFile("versions.json")
