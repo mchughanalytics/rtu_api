@@ -1,6 +1,12 @@
 {
     "versions": [
-        {"rtuVersion": "1.0.0"},
-        {"rtuVersion": "1.0.1"}
+        {
+            "rtuVersion": "1.0.0",
+            "releaseDate": "20200501"
+        },
+        {
+            "rtuVersion": "1.0.1",
+            "releaseDate": "20200501"
+        }
     ]
 }

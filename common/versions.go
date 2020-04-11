@@ -12,7 +12,8 @@ type VersionList struct {
 }
 
 type Version struct {
-	RTUVersion string `json:"rtuVersion"`
+	RTUVersion  string `json:"rtuVersion"`
+	ReleaseDate string `json:"releaseDate"`
 }
 
 func GetAllVersions() (*VersionList, error) {
