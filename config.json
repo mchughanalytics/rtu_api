@@ -1,0 +1,35 @@
+{
+    "rtuApiVersion": "0.0.1",
+    "rtuPaths": {
+        "ui": "path/to/ui/index.html",
+        "backups": "path/to/backups/"
+    },
+    "rmPaths": {
+        "v-1.0.0": {
+            "templates": "/usr/share/remarkable/templates/",
+            "screens": "/usr/share/remarkable/",
+            "files": "/home/root/.local/share/remarkable/xochitl/",
+            "config": "/home/root/.config/remarkable/xochitl.conf"
+        }
+    },
+    "account": {
+        "username": "chrishaylesuk@gmail.com",
+        "connectionString": "somestring=="
+    },
+    "devices": [
+        {
+            "name": "My rM",
+            "ipAddress": "10.0.0.1",
+            "root": "password"
+        }
+    ],
+    "rmCloud": {
+        "deviceId": "abcdefg1234567",
+        "deviceKey": "7654321gfedcba",
+        "endpoint": "url/for/endpoint/"
+    },
+    "rtuCloud": {
+        "updateUrl": "url/for/update/check/",
+        "storeUrl": "url/for/store/"
+    }
+}
