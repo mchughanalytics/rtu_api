@@ -1,4 +1,4 @@
-package ui
+package rtu_api
 
 import (
 	"fmt"

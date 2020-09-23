@@ -1,10 +1,10 @@
-package common
+package rtu_api
 
 import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
-	"path/filepath"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -42,7 +42,12 @@ func (v *Version) GetHotFix() int {
 func GetAllVersions() (*VersionList, error) {
 	vl := &VersionList{}
 
-	versionsPath, _ := filepath.Abs("./common/versions.json")
+	dir, err := os.Getwd()
+	if err != nil {
+		return vl, fmt.Errorf("ERROR: unable to read version.json: %s", err)
+	}
+
+	versionsPath := fmt.Sprintf("%s/versions.json", dir)
 	content, err := ioutil.ReadFile(versionsPath)
 	if err != nil {
 		return vl, fmt.Errorf("ERROR: unable to read version.json: %s", err)
