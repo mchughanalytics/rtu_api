@@ -1,4 +1,4 @@
-package rtu_api
+package rtuapi
 
 import (
 	"fmt"
@@ -52,7 +52,17 @@ func NewRmClient(h, u, p string) (*RmClient, error) {
 	}
 
 	rmc.Connected = true
-	fmt.Println(rmc)
+	//fmt.Println(rmc)
+
+	res, err := rmc.RunCommand("echo $PWD")
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		for i, line := range res {
+			fmt.Printf("%d: %s", i, line)
+		}
+
+	}
 
 	return rmc, nil
 }

@@ -1,1 +1,1 @@
-# rtu_api
+# rtuapi

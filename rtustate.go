@@ -1,6 +1,9 @@
-package rtu_api
+package rtuapi
 
-import "log"
+import (
+	"fmt"
+	"log"
+)
 
 // RtuState manages current application state
 type RtuState struct {
@@ -110,6 +113,7 @@ func (rtus *RtuState) ListenForStateChange() {
 		}
 
 		if sc.NewState == "device_configure" {
+			fmt.Println("Configure device received.")
 			rtus.configureDevice(sc.Data)
 		}
 

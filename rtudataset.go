@@ -1,4 +1,4 @@
-package rtu_api
+package rtuapi
 
 type DataSet interface {
 	ToJson() []byte
